@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" ng-app="todomvc">
+
+<head>
+    <meta charset="utf-8">
+    <title>Typescript & AngularJS</title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <section ng-controller="todoCtrl">
+        <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+            <a class="navbar-brand" href="#">Typescript & AngularJS</a>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <div class="jumbotron" style="margin-top:80px;">
+                        <h1 class="display-5">Add a task</h1>
+                        <form ng-submit="vm.addTodo()">
+                            <input style="width: 80%;" placeholder="What needs to be done?" ng-model="newTodo">
+                            <button type="submit">Add</button>
+                        </form>
+                    </div>
+                    <section ng-show="todos.length" ng-cloak>
+                        <ul class="list-group">
+                            <li class="list-group-item" ng-repeat="todo in todos | filter:statusFilter track by $index">
+                                <div>
+                                    <input type="checkbox" ng-model="todo.completed">
+                                    <label ng-class="{'strikethrough' : todo.completed}">{{todo.title}}</label>
+                                    <span ng-click="vm.removeTodo(todo)" class="tag tag-default tag-pill float-xs-right">X</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <todos-length num="todos.length"></todos-length>
+                    </section>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </div>
+
+    </section>
+    <script src="js/Application.js"></script>
+</body>
+
+</html>

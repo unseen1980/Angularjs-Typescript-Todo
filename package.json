@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "compile": "tsc --sourcemap --out js/Application.js js/_all.ts"
+  },
+  "dependencies": {
+    "angular": "^1.5.8"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.10"
+  }
+}
