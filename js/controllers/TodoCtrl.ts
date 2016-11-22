@@ -8,13 +8,11 @@ namespace todos {
 		private todos: TodoItem[];
 		public static $inject = [
 			'$scope',
-			'$location',
 			'todoStorage'
 		];
 
 		constructor(
 			private $scope: ITodoScope,
-			private $location: ng.ILocationService,
 			private todoStorage: ITodoStorage
 		) {
 			this.todos = $scope.todos = todoStorage.get();

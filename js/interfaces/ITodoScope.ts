@@ -5,7 +5,6 @@ namespace todos {
 		todos: TodoItem[];
 		newTodo: string;
 		statusFilter: { completed?: boolean };
-		location: ng.ILocationService;
 		vm: TodoCtrl;
 	}
 }
