@@ -1,12 +1,12 @@
 /// <reference path='../_all.ts' />
 
 namespace todos {
-    'use strict';
+	'use strict';
 
-    export class TodoItem {
-        constructor(
-            public title: string,
-            public completed: boolean
-        ) { }
-    }
+	export class TodoItem {
+		constructor(
+			public title: string,
+			public completed: boolean
+		) { }
+	}
 }

@@ -11,6 +11,7 @@ namespace todos {
 			'todoStorage'
 		];
 
+
 		constructor(
 			private $scope: ITodoScope,
 			private todoStorage: ITodoStorage
@@ -27,7 +28,7 @@ namespace todos {
 		}
 
 		addTodo() {
-			var newTodo: string = this.$scope.newTodo.trim();
+			let newTodo: string = this.$scope.newTodo.trim();
 			if (!newTodo.length) {
 				return;
 			}

@@ -1,4 +1,6 @@
 {
+  "name": "angularjs-typescript",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "compile": "tsc --sourcemap --out js/Application.js js/_all.ts"
@@ -7,6 +9,7 @@
     "angular": "^1.5.8"
   },
   "devDependencies": {
+    "tslint": "^4.0.1",
     "typescript": "^2.0.10"
   }
 }
