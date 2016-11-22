@@ -1,6 +1,6 @@
 /// <reference path='../_all.ts' />
 
-module todos {
+namespace todos {
 	export interface ITodoStorage {
 		get (): TodoItem[];
 		put(todos: TodoItem[]);

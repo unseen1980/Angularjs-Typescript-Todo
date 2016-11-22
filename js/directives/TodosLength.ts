@@ -1,6 +1,6 @@
 /// <reference path='../_all.ts' />
 
-module todos {
+namespace todos {
     'use strict';
     export function todosLength(): ng.IDirective {
         return {

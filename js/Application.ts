@@ -5,7 +5,7 @@
  *
  * @type {angular.Module}
  */
-module todos {
+namespace todos {
     'use strict';
 
     angular.module('todomvc', [])
